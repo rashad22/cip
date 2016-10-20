@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index');
  * Admin Controller
  */
 Route::get('/admin', 'AdminController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
