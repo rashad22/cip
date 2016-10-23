@@ -14,6 +14,11 @@
         <![endif]-->
         <!-- global css -->
         <link href="{{ asset('public/admin/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <!--
+        datapicker css 
+        -->
+        <link href="{{ asset('public/admin/vendors/datepicker/datepicker3.css') }}" rel="stylesheet" type="text/css" />
+        
         <!-- font Awesome -->
         <link href="{{ asset('public/admin/vendors/font-awesome-4.2.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('public/admin/css/styles/black.css') }}" rel="stylesheet" type="text/css" id="colorscheme" />
@@ -22,6 +27,11 @@
         <link href="{{ asset('public/admin/css/custom_style.css') }}" rel="stylesheet" type="text/css"/>
         <!-- end of global css -->
         <script src="{{ asset('public/admin/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
+        <!--
+        datapicker js 
+        -->
+<script src="{{ asset('public/admin/js/metisMenu.js') }}" type="text/javascript"></script>
+ <script src="{{ asset('public/admin/vendors/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
         <script>
 window.Laravel = <?php
 echo json_encode([
@@ -303,8 +313,7 @@ echo json_encode([
         <script src="{{ asset('public/admin/vendors/livicons/minified/raphael-min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('public/admin/vendors/livicons/minified/livicons-1.4.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('public/admin/js/josh.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('public/admin/js/metisMenu.js') }}" type="text/javascript"></script>
-
+        
         <!-- end of global js -->
     </body>
 </html>

@@ -26,3 +26,4 @@ Route::get('/admin', 'AdminController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/form', 'AdminController@form');

@@ -1,7 +1,7 @@
 /*
 Custom style
 */
-.btn{
+.btn, .form-control{
     border-radius: 0;
 }
 .alert-success{

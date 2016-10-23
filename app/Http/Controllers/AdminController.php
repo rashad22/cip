@@ -24,7 +24,15 @@ class AdminController extends Controller {
         );
         return view('admin/home')->with('data', $data);
     }
-
+public function form()
+    {
+        $data = array(
+            'title' => 'Dashboard',
+            'active' => 'dashboard',
+            'meta' => 'dashboard'
+        );
+        return view('admin/form')->with('data',$data);
+    }
     /**
      * Show the form for creating a new resource.
      *
