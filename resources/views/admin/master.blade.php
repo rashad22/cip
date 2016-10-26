@@ -25,6 +25,8 @@
         <link href="{{ asset('public/admin/css/panel.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ asset('public/admin/css/metisMenu.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ asset('public/admin/css/custom_style.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('public/admin/vendors/switch/dist/css/bootstrap3/bootstrap-switch.css') }}" rel="stylesheet" />
+
         <!-- end of global css -->
         <script src="{{ asset('public/admin/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
         <!--
@@ -32,6 +34,8 @@
         -->
 <script src="{{ asset('public/admin/js/metisMenu.js') }}" type="text/javascript"></script>
  <script src="{{ asset('public/admin/vendors/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('public/admin/vendors/switch/dist/js/bootstrap-switch.js') }}"></script>
+ 
         <script>
 window.Laravel = <?php
 echo json_encode([
@@ -252,53 +256,8 @@ echo json_encode([
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">
-                <section class="sidebar ">
-                    <div class="page-sidebar  sidebar-nav">
-
-                        <div class="clearfix"></div>
-                        <!-- BEGIN SIDEBAR MENU -->
-                        <ul id="menu" class="page-sidebar-menu">
-                            <li class="{{$data['active']=='dashboard'?'active':''}}">
-                                <a target="_blank" href="{{ url('/') }}">
-                                    <i class="livicon" data-name="home" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
-                                    <span class="title">Web site</span>
-                                </a>
-
-                            </li>
-
-
-                            <li class="{{$data['active']=='media'?'active':''}}">
-                                <a href="#">
-                                    <i class="livicon" data-name="medal" data-size="18" data-c="#00bc8c" data-hc="#00bc8c" data-loop="true"></i>
-                                    <span class="title">Media</span>
-                                    <span class="fa arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="{{$data['meta']=='new_media'?'active':''}}">
-                                        <a href="{{ URL::to('add-media') }}">
-                                            <i class="fa fa-angle-double-right"></i>
-                                            Add Media Image
-                                        </a>
-                                    </li>
-                                    <li class="{{$data['meta']=='media_list'?'active':''}}">
-                                        <a href="{{ URL::to('media') }}">
-                                            <i class="fa fa-angle-double-right"></i>
-                                            Media
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="{{$data['active']=='gallery'?'active':''}}">
-                                <a href="{{ URL::to('gallery') }}">
-                                    <i class="livicon" data-name="medal" data-size="18" data-c="#00bc8c" data-hc="#00bc8c" data-loop="true"></i>
-                                    <span class="title">Gallery</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- END SIDEBAR MENU -->
-                    </div>
-                </section>
+            <aside class="left-side sidebar-offcanvas collapse-left">
+                
             </aside>
             @yield('content')
             <!-- right-side -->
@@ -313,7 +272,6 @@ echo json_encode([
         <script src="{{ asset('public/admin/vendors/livicons/minified/raphael-min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('public/admin/vendors/livicons/minified/livicons-1.4.min.js') }}" type="text/javascript"></script>
         <script src="{{ asset('public/admin/js/josh.js') }}" type="text/javascript"></script>
-        
         <!-- end of global js -->
     </body>
 </html>
