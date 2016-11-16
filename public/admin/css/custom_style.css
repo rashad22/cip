@@ -149,3 +149,6 @@ media modal css
     width: 100%;
     height: auto;
 }
+.form-group .help-block{
+    color: #ff0606 !important;
+}

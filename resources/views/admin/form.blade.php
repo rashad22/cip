@@ -59,6 +59,8 @@
                             </ol>
                         </div>
                         <div class="col-md-10 pd-r">
+                        <form method="post" action="{{ URL::to('save') }}" class="form-horizontal">
+                        {{ csrf_field() }}
                             <div id="accordion-demo" class="panel-group">
                                 <div class="panel panel-success">
                                     <div class="panel-heading">
@@ -514,11 +516,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="acc-wizard-step"></div>
+                                                
                                             </form>
                                         </div>
                                     </div>
                                 </div>
+<input type="submit" class="btn btn-success" name="submit" value="Submit">
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -530,6 +535,7 @@
 
 <!-- end of page level js -->
 <script type="text/javascript">
+
 $('.switch').bootstrapSwitch();
 $('.switch').on('switchChange.bootstrapSwitch', function(event, state) {
 if(state===true){

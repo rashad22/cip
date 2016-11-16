@@ -428,7 +428,7 @@
             var prepend = "wizard "+this.el.id+": ";
             var args = [prepend];
             args.push.apply(args, arguments);
-            console.log.apply(console, args);
+            // console.log.apply(console, args);
         },
         
         _create: function(markup) {
