@@ -77,7 +77,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="ap_dateofbirth">Date of Birth *</label>
-                                                <input id="ap_dateofbirth" name="ap_dateofbirth" type="text" data-date-end-date="-1000d" placeholder="Date of Birth" class="form-control datepicker required" value="{{ old('ap_guardian') }}">
+                                                <input id="ap_dateofbirth" name="ap_dateofbirth" type="text" data-date-end-date="-1000d" data-date-format='yyyy-mm-dd' placeholder="Date of Birth" class="form-control datepicker required" value="{{ old('ap_guardian') }}">
                                                         @if ($errors->has('ap_dateofbirth'))
                                                         <span class="help-block">
                                                             <strong>{{ $errors->first('ap_dateofbirth') }}</strong>
@@ -260,7 +260,7 @@
                                             	<div class="col-sm-6">
                                             		<div class="form-group">
                                                 <label for="pp_isue_date">Passport Issue Date *</label>
-                                                <input id="pp_isue_date" name="pp_isue_date" type="text" placeholder="Passport Issue Date" class="form-control required datepicker" value="{{ old('pp_isue_date') }}">
+                                                <input id="pp_isue_date" data-date-format='yyyy-mm-dd' name="pp_isue_date" type="text" placeholder="Passport Issue Date" class="form-control required datepicker" value="{{ old('pp_isue_date') }}">
                                                 @if ($errors->has('pp_isue_date'))
                                                         <span class="help-block">
                                                             <strong>{{ $errors->first('pp_isue_date') }}</strong>
@@ -417,7 +417,7 @@
                                         <section>
                                         <div class="form-group">
                                             <label>Are you currently a Loan Defaulter (Bank/Financial Institutions)?</label>
-                                            <input type="checkbox" class="switch" name="my-checkbox" data-on-text='Yes' data-off-text='No' data-size="large">
+                                            <input type="checkbox" class="switch" name="one_check" data-on-text='Yes' data-off-text='No' data-size="large">
                                         </div>
                                         <div class="row hidden">
                                         <div class="col-sm-5">
@@ -433,7 +433,7 @@
                                        </div>
                                        <div class="form-group">
                                             <label>Are you currently a Loan Defaulter (Bank/Financial Institutions)?</label>
-                                            <input type="checkbox" class="switch" name="my-checkbox" data-on-text='Yes' data-off-text='No' data-size="large">
+                                            <input type="checkbox" class="switch" name="two_check" data-on-text='Yes' data-off-text='No' data-size="large">
                                         </div>
                                         <div class="row hidden">
                                         <div class="col-sm-5">
@@ -449,7 +449,7 @@
                                        </div>
                                        <div class="form-group">
                                             <label>Whether Convicted under Money Laundering Prevention Act 2002?</label>
-                                            <input type="checkbox" class="switch" name="my-checkbox" data-on-text='Yes' data-off-text='No' data-size="large">
+                                            <input type="checkbox" class="switch" name="three_check" data-on-text='Yes' data-off-text='No' data-size="large">
                                         </div>
                                         <div class="row hidden">
                                         <div class="col-sm-5">
@@ -465,7 +465,7 @@
                                        </div>
                                            <div class="form-group">
                                             <label>Whether Previously Selected for CIP (NRB)?</label>
-                                            <input type="checkbox" class="switch" name="my-checkbox" data-on-text='Yes' data-off-text='No' data-size="large">
+                                            <input type="checkbox" class="switch" name="four_check" data-on-text='Yes' data-off-text='No' data-size="large">
                                         </div>
                                         <div class="row hidden">
                                         <div class="col-sm-5">

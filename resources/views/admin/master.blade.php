@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel').'-'.$data['title'] }}</title>
+        <title>{{ config('app.name', 'Laravel').'-'.$title }}</title>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -55,16 +55,13 @@ echo json_encode([
 
     <body class="skin-josh">
         <header class="header">
-            <a href="index.html" class="logo">
-                <img src="{{ asset('public/admin/img/logo.png') }}" alt="logo">
+            <a href="" class="logo">
+                <!--img src="{{ asset('public/admin/img/logo.png') }}" alt="logo"-->
+                <h1>CIP</h1>
             </a>
             <nav class="navbar navbar-static-top" role="navigation">
                 <!-- Sidebar toggle button-->
-                <div>
-                    <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
-                        <div class="responsive_nav"></div>
-                    </a>
-                </div>
+                
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="dropdown messages-menu">
